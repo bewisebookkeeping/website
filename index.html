@@ -72,8 +72,10 @@
       }
 
       @media (max-width: 991px) {
-        nav#mainNav a img#white {display: none; visibility: hidden;}
-        nav#mainNav a img#grey  {display: none; visibility: hidden;}
+        nav#mainNav a img#white, nav#mainNav a:hover img#white,
+        nav#mainNav a img#grey, nav#mainNav a:hover img#grey  {
+          display: none; visibility: hidden;
+        }
         nav#mainNav a img#orange  {
           display: inline;
           visibility: visible;
