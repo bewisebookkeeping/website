@@ -32,8 +32,8 @@
       }
 
       nav#mainNav .navbar-brand img {
-        margin:-25px -8px 0;
-        height:46px;
+        margin: -15px -11px 0;
+        height: 36px;
         transition: visibility 200ms;
       }
 
@@ -57,6 +57,23 @@
         font-size: 30px;
       }
 
+      @media (max-width: 768px) {
+        nav#mainNav a {
+          text-align: right;
+        }
+
+        nav#mainNav a div{ font-size: 20px; }
+        nav#mainNav a > div{ display: block; }
+        nav#mainNav a div{ margin-top:-10px;}
+        nav#mainNav a img#white {display: none; visibility: hidden;}
+        nav#mainNav a img#grey  {display: none; visibility: hidden;}
+        nav#mainNav a img#orange  {
+          display: inline;
+          visibility: visible;
+          margin: -10px -8px 0;
+          height: 25px;
+        }
+      }
 
       h1#homeHeading {
         filter: progid:DXImageTransform.Microsoft.Shadow(color=#0000FF,direction=45);
@@ -73,11 +90,15 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-          <div>Be Wise B</div>
-          <img id="grey" src="img/be-wise-logo-grey.png"/>
-          <img id="white" src="img/be-wise-logo-white.png"/>
-          <img id="orange" src="img/be-wise-logo.png"/>
-          <div>kkeeping Services</div>
+          <div>Be Wise </div>
+          <div>
+            <div>B</div>
+            <img id="grey" src="img/be-wise-logo-grey.png">
+            <img id="white" src="img/be-wise-logo-white.png">
+            <img id="orange" src="img/be-wise-logo.png">
+            <div>kkeeping</div>
+          </div>
+          <div>Services</div>
         </a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
