@@ -7,3 +7,66 @@
 @import "portfolio.scss";
 @import "cta.scss";
 @import "bootstrap-overrides.scss";
+
+@media (min-width: 768px) {
+  header.masthead .header-content .header-content-inner {
+    max-width: 50%;
+  }
+}
+
+nav#mainNav .navbar-brand img {
+  margin: -15px -11px 0;
+  height: 36px;
+  transition: visibility 200ms;
+}
+
+nav#mainNav a img#white {display: none; visibility: hidden;}
+nav#mainNav a:hover img#grey  {display: none; visibility: hidden;}
+nav#mainNav a:hover img#white {display: inline-block; visibility: visible;}
+nav#mainNav a img#orange {display: none; visibility: hidden;}
+
+nav#mainNav.navbar-shrink a img#grey,
+nav#mainNav.navbar-shrink a img#white {
+  display: none; visibility: hidden;
+}
+nav#mainNav.navbar-shrink a img#orange {
+  display: inline-block;
+  visibility: visible;
+}
+
+nav#mainNav a div {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  nav#mainNav a.navbar-brand {
+    text-align: right;
+  }
+
+  nav#mainNav a div{ font-size: 20px; }
+  nav#mainNav a > div{ display: block; }
+  nav#mainNav a div{ margin-top:-10px;}
+  nav#mainNav a img#orange  {
+    margin: -10px -8px 0;
+    height: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  nav#mainNav a img#white, nav#mainNav a:hover img#white,
+  nav#mainNav a img#grey, nav#mainNav a:hover img#grey  {
+    display: none; visibility: hidden;
+  }
+  nav#mainNav a img#orange  {
+    display: inline;
+    visibility: visible;
+  }
+}
+
+h1#homeHeading {
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#0000FF,direction=45);
+  text-shadow: 0.2rem 0.2rem 0.2rem black;
+  margin-bottom: 50px;
+}
