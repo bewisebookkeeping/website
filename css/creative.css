@@ -343,6 +343,9 @@ header.masthead {
 .btn-xl {
   padding: 15px 30px; }
 
+hr {
+  margin-top: 4rem; }
+
 @media (min-width: 768px) {
   header.masthead .header-content .header-content-inner {
     max-width: 50%; } }

@@ -8,6 +8,10 @@
 @import "cta.scss";
 @import "bootstrap-overrides.scss";
 
+hr {
+  margin-top: 4rem;
+}
+
 @media (min-width: 768px) {
   header.masthead .header-content .header-content-inner {
     max-width: 50%;
