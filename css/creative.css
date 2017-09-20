@@ -344,7 +344,8 @@ header.masthead {
   padding: 15px 30px; }
 
 hr {
-  margin-top: 4rem; }
+  margin-top: 4rem;
+  margin-bottom: 2rem; }
 
 @media (min-width: 768px) {
   header.masthead .header-content .header-content-inner {
@@ -411,3 +412,6 @@ h1#homeHeading {
   filter: progid:DXImageTransform.Microsoft.Shadow(color=#0000FF,direction=45);
   text-shadow: 0.2rem 0.2rem 0.2rem black;
   margin-bottom: 50px; }
+
+a#get-in-touch {
+  margin-top: 2rem; }
