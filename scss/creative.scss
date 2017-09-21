@@ -28,13 +28,13 @@ nav#mainNav .navbar-brand img {
 nav#mainNav a img#white {display: none; visibility: hidden;}
 nav#mainNav a:hover img#grey  {display: none; visibility: hidden;}
 nav#mainNav a:hover img#white {display: inline-block; visibility: visible;}
-nav#mainNav a img#orange {display: none; visibility: hidden;}
+nav#mainNav a img#blue {display: none; visibility: hidden;}
 
 nav#mainNav.navbar-shrink a img#grey,
 nav#mainNav.navbar-shrink a img#white {
   display: none; visibility: hidden;
 }
-nav#mainNav.navbar-shrink a img#orange {
+nav#mainNav.navbar-shrink a img#blue {
   display: inline-block;
   visibility: visible;
 }
@@ -53,7 +53,7 @@ nav#mainNav a div {
   nav#mainNav a div{ font-size: 20px; }
   nav#mainNav a > div{ display: block; }
   nav#mainNav a div{ margin-top:-10px;}
-  nav#mainNav a img#orange  {
+  nav#mainNav a img#blue  {
     margin: -10px -8px 0;
     height: 25px;
   }
@@ -64,7 +64,7 @@ nav#mainNav a div {
   nav#mainNav a img#grey, nav#mainNav a:hover img#grey  {
     display: none; visibility: hidden;
   }
-  nav#mainNav a img#orange  {
+  nav#mainNav a img#blue  {
     display: inline;
     visibility: visible;
   }
