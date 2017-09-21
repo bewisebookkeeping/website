@@ -317,6 +317,10 @@
       </div>
     </section>
 
+    <div id="promo" style="position: fixed;top: 75px;z-index: 10000;color: white;width: 100%;background: #1a75ff;text-align: center;">
+      Get Xero for $1 a month for 1 year when you start up with me in the month of September!
+    </div>
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
@@ -329,6 +333,13 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+
+    <script>
+      var d = new Date();
+      if (d.getMonth() > 8 || d.getFullYear() > 2017 ) {
+        document.getElementById('promo').style.display = 'none';
+      }
+    </script>
 
   </body>
 
