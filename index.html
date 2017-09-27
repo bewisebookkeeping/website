@@ -26,7 +26,7 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet"> -->
 
     <!-- Custom styles for this template -->
     <link href="css/creative.min.css" rel="stylesheet">
@@ -59,9 +59,6 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#services">Services</a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li> -->
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
@@ -73,9 +70,9 @@
     <header class="masthead">
       <div class="header-content">
         <div class="header-content-inner">
-          <h1 id="homeHeading"></h1>
-          <!-- <hr>
-          <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
+          <h1 id="homeHeading">
+            <!-- home heading poupulated here -->
+          </h1>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
         </div>
       </div>
@@ -88,7 +85,7 @@
             <h1 class="section-heading text-white">About</h1>
 
             <p class="text-faded about-text">
-
+              <!-- about text populated here -->
             </p>
 
             <hr class="light"/>
@@ -161,61 +158,10 @@
         </div>
       </div>
       <div class="container col-lg-8">
+        <div class="row" id="service-list">
+          <!-- services populated here -->
+        </div>
         <div class="row">
-          <div class="col-lg-4 col-md-4 col-6 text-center">
-            <div class="service-box text-primary">
-              <i class="fa fa-4x fa-sign-out sr-icons"></i>
-              <h4>Accounts Payable</h4>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-6 text-center">
-            <div class="service-box text-primary">
-              <i class="fa fa-4x fa-sign-in sr-icons"></i>
-              <h4>Accounts Receivable</h4>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-6 text-center text-faded">
-            <div class="service-box text-primary">
-              <i class="fa fa-4x fa-list sr-icons"></i>
-              <h4>General Ledger</h4>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-6 text-center">
-            <div class="service-box text-primary">
-              <i class="fa fa-4x fa-usd sr-icons"></i>
-              <h4>Cash Management</h4>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-6 text-center">
-            <div class="service-box text-primary">
-              <i class="fa fa-4x fa-pie-chart sr-icons"></i>
-              <h4>Financial Reporting</h4>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-6 text-center">
-            <div class="service-box text-primary">
-              <i class="fa fa-4x fa-file-text sr-icons"></i>
-              <h4>Invoicing</h4>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-6 text-center">
-            <div class="service-box text-primary">
-              <i class="fa fa-4x fa-table sr-icons"></i>
-              <h4>Spreadsheets</h4>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-6 text-center">
-            <div class="service-box text-primary">
-              <i class="fa fa-4x fa-users sr-icons"></i>
-              <h4>Payroll</h4>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-12 text-center">
-            <div class="service-box text-primary">
-              <i class="fa fa-4x fa-question-circle sr-icons"></i>
-              <h4>Troubleshooting</h4>
-            </div>
-          </div>
           <div class="col-12 text-center">
             <a class="btn btn-primary btn-xl js-scroll-trigger text-white" id="get-in-touch" href="#contact">Get in Touch!</a>
           </div>
@@ -227,30 +173,13 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">Let's Get In Touch!</h2>
+            <h2 class="section-heading text-white"></h2>
             <hr class="light">
-            <p class="text-white">Ready to work with me? That's great! Give me a call or send me an email and I will get back to you as soon as possible!</p>
+            <p class="text-white" id="contact-blurb"></p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 col-sm-4 ml-auto text-center text-white">
-            <i class="fa fa-phone fa-3x sr-contact"></i>
-            <p>
-              <a href="tel:+15184241825" id="telephone">518-424-1825</a>
-            </p>
-          </div>
-          <div class="col-12 col-sm-4 mr-auto text-center text-white">
-            <i class="fa fa-at fa-3x sr-contact"></i>
-            <p>
-              <a href="mailto:janet@bewisebookkeeping.com" class="text-white">janet@bewisebookkeeping.com</a>
-            </p>
-          </div>
-          <div class="col-12 col-md-4 mr-auto text-center text-white">
-            <i class="fa fa-facebook-official fa-3x sr-contact"></i>
-            <p>
-              <a href="https://www.facebook.com/bewisebooks/" target="_blank" class="text-white">Facebook</a>
-            </p>
-          </div>
+        <div class="row" id="contact-methods">
+          <!-- contact methods set here -->
         </div>
       </div>
     </section>
@@ -335,6 +264,74 @@
               $('#fix-mess h2').html(entry.fields.title);
               $('#fix-mess .description').html(entry.fields.value);
             });
+
+      client.getEntries({
+        content_type: 'service',
+        order: 'fields.order'
+      }).then(function(entries) {
+        var serviceList = $('#service-list');
+        /*
+          <div class="col-lg-4 col-md-4 col-6 text-center">
+            <div class="service-box text-primary">
+              <i class="fa fa-4x sr-icons fa-font-awesome-icon"></i>
+              <h4>Accounts Payable</h4>
+            </div>
+          </div>
+        */
+        entries.items.forEach(function(entry) {
+          var icon = document.createElement('i');
+          icon.className = 'fa fa-4x sr-icons fa-' + entry.fields.fontAwesomeIcon;
+          var h4 = document.createElement('h4');
+          h4.innerText = entry.fields.title;
+
+          var innerDiv = document.createElement('div');
+          innerDiv.className = 'service-box text-primary';
+          $(innerDiv).append(icon).append(h4);
+
+          var outerDiv = document.createElement('div');
+          outerDiv.className = 'col-lg-4 col-md-4 col-6 text-center';
+          $(outerDiv).append(innerDiv);
+          serviceList.append(outerDiv);
+        });
+      });
+
+      client.getEntry('5Wfo68t7zywyymcKwEyKqI')
+            .then(function(entry) {
+              $('#contact h2').html(entry.fields.title);
+              $('#contact-blurb').html(entry.fields.value);
+            });
+
+      client.getEntries({
+        content_type: 'contactMethod',
+        order: 'fields.order'
+      }).then(function(entries) {
+        var contactMethods = $('#contact-methods');
+        /*
+          <div class="col-12 col-sm-4 ml-auto text-center text-white">
+            <i class="fa fa-phone fa-3x sr-contact"></i>
+            <p>
+              <a href="tel:+15184241825" id="telephone">518-424-1825</a>
+            </p>
+          </div>
+        */
+        entries.items.forEach(function(entry) {
+          var icon = document.createElement('i');
+          icon.className = 'fa fa-3x sr-contact fa-' + entry.fields.fontAwesomeIcon;
+          var paragraph = document.createElement('p');
+          var link = document.createElement('a');
+          link.href = entry.fields.htmlReference;
+          link.target = '_blank';
+          link.className = 'text-white';
+          link.innerHTML = entry.fields.title;
+          $(paragraph).append(link)
+
+          var wrapperDiv = document.createElement('div');
+          wrapperDiv.className = 'col-12 col-sm-4 ml-auto text-center text-white';
+          $(wrapperDiv).append(icon).append(paragraph);
+
+          contactMethods.append(wrapperDiv);
+        });
+      });
 
     </script>
     <!-- Custom scripts for this template -->
