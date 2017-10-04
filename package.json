@@ -17,13 +17,13 @@
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "Be Wise Bookkeeping",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "Kyle Thornton (https://github.com/kylethornton)"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-creative.git"
+        "url": "https://github.com/bewisebookkeeping/website"
     },
     "dependencies": {
         "bootstrap": "^4.0.0-beta",
@@ -32,7 +32,8 @@
         "jquery.easing": "^1.4.1",
         "magnific-popup": "^1.1.0",
         "popper.js": "1.12.3",
-        "scrollreveal": "3.3.6"
+        "scrollreveal": "3.3.6",
+        "vue": "2.4.4"
     },
     "devDependencies": {
         "browser-sync": "2.18.13",

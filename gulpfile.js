@@ -9,8 +9,8 @@ var pkg = require('./package.json');
 
 // Set the banner content
 var banner = ['/*!\n',
-  ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
+  ' * Be Wise Bookkeeping',
+  ' * Copyright 2017-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
   ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
   ' */\n',
   ''
@@ -73,6 +73,9 @@ gulp.task('copy', function() {
 
   gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
     .pipe(gulp.dest('vendor/jquery'))
+
+  gulp.src(['node_modules/vue/dist/vue.js','node_modules/vue/dist/vue.min.js'])
+    .pipe(gulp.dest('vendor/vue'))
 
   gulp.src(['node_modules/magnific-popup/dist/*'])
     .pipe(gulp.dest('vendor/magnific-popup'))

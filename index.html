@@ -34,164 +34,180 @@
   </head>
 
   <body id="page-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-          <div>Be Wise</div>
-          <div>
-            <div>B</div>
-            <img id="grey" src="img/be-wise-logo-grey.png">
-            <img id="white" src="img/be-wise-logo-white.png">
-            <img id="blue" src="img/be-wise-logo.png">
-            <div>kkeeping</div>
+    <div id="app">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <div>Be Wise</div>
+            <div>
+              <div>B</div>
+              <img id="grey" src="img/be-wise-logo-grey.png">
+              <img id="white" src="img/be-wise-logo-white.png">
+              <img id="blue" src="img/be-wise-logo.png">
+              <div>kkeeping</div>
+            </div>
+          </a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              </li>
+            </ul>
           </div>
-        </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <header class="masthead">
-      <div class="header-content">
-        <div class="header-content-inner">
-          <h1 id="homeHeading">
-            <!-- home heading poupulated here -->
-          </h1>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+      <header class="masthead">
+        <div class="header-content">
+          <div class="header-content-inner">
+            <h1 id="homeHeading" v-cloak>
+              {{ heading }}
+            </h1>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 mx-auto text-center">
-            <h1 class="section-heading text-white">About</h1>
+      <section class="bg-primary" id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 mx-auto text-center">
+              <h1 class="section-heading text-white" v-cloak>{{ aboutHeader}}</h1>
 
-            <p class="text-faded about-text">
-              <!-- about text populated here -->
-            </p>
+              <p class="text-faded about-text" v-cloak>
+                {{ about }}
+              </p>
 
-            <hr class="light"/>
-            <h2 class="section-heading text-white">Partnerships</h2>
-            <div class="col-lg-12 mx-auto text-center">
-              <div class="row partner">
-                <div class="col-lg-6 mx-auto text-center">
+              <hr class="light"/>
+              <h2 class="section-heading text-white">Partnerships</h2>
+              <div class="col-lg-12 mx-auto text-center">
+                <div class="row partner">
+                  <div class="col-lg-6 mx-auto text-center">
 
-                  <div>
-                    <a href="https://www.xero.com/us/">
-                      <img src="img/xero-logo.png" alt="xero logo" class="xero" target="_blank"/>
-                    </a>
+                    <div>
+                      <a href="https://www.xero.com/us/">
+                        <img src="img/xero-logo.png" alt="xero logo" class="xero" target="_blank"/>
+                      </a>
+                    </div>
+                    <h3 class="section-heading text-white">Xero Partner</h2>
+                    <p class="text-faded">
+                      Cloud based small business accounting software with all the time-saving tools you need to grow your business.
+                    </p>
                   </div>
-                  <h3 class="section-heading text-white">Xero Partner</h2>
-                  <p class="text-faded">
-                    Cloud based small business accounting software with all the time-saving tools you need to grow your business.
-                  </p>
-                </div>
-                <div class="col-lg-6 mx-auto text-center">
-                  <div>
-                    <a href="https://quickbooks.intuit.com/" target="_blank">
-                      <img src="img/qb.png" alt="Quickbooks logo"/>
-                    </a>
+                  <div class="col-lg-6 mx-auto text-center">
+                    <div>
+                      <a href="https://quickbooks.intuit.com/" target="_blank">
+                        <img src="img/qb.png" alt="Quickbooks logo"/>
+                      </a>
+                    </div>
+                    <h3 class="section-heading text-white">Quickbooks ProAdvisor</h2>
+                    <p class="text-faded">
+                      The #1 rated small business accounting software.
+                    </p>
                   </div>
-                  <h3 class="section-heading text-white">Quickbooks ProAdvisor</h2>
-                  <p class="text-faded">
-                    The #1 rated small business accounting software.
-                  </p>
                 </div>
               </div>
-            </div>
 
 
-            <span id="industry-experience">
-              <hr class="light">
-              <h2 class="section-heading text-white">Industry Experience</h2>
+              <span id="industry-experience">
+                <hr class="light">
+                <h2 class="section-heading text-white">Industry Experience</h2>
 
-              <p class="text-faded description">
-                Janet has over 30 years of experience serving clients in many industries
-                <div class="container">
-                  <div class="row" id="industries">
-                    <!-- industries populated here -->
+                <p class="text-faded description">
+                  Janet has over 30 years of experience serving clients in many industries
+                  <div class="container">
+                    <div class="row" id="industries" v-cloak>
+                      <div class="col-lg-3 col-sm-4 col-6 text-center" v-for="industry in industries">
+                        <div class="service-box">
+                          <i class="fa fa-2x text-faded sr-icons" :class="'fa-' + industry.fields.fontAwesomeIcon"></i>
+                          <p class="text-faded">{{ industry.fields.title }}</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </p>
-            </span>
+                </p>
+              </span>
 
-            <span id="fix-mess">
+              <span id="fix-mess">
+                <hr class="light">
+                <h2 class="section-heading text-white fix-mess"></h2>
+
+                <p class="text-faded description">
+                  Have you gotten behind with your bookkeeping or had a bad experience with your old bookkeeper and need someone to cleanup the mess?  That's one of my specialties.
+                </p>
+              </span>
+              <a class="btn btn-default btn-xl js-scroll-trigger text-primary" href="#services">How Can I Help?</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="services" >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">At Your Service</h2>
+              <hr class="primary">
+            </div>
+          </div>
+        </div>
+        <div class="container col-lg-8">
+          <div class="row" id="service-list">
+            <div class="col-lg-4 col-md-4 col-6 text-center" v-for="service in services" v-cloak>
+              <div class="service-box text-primary" >
+                <i class="fa fa-4x sr-icons" :class="'fa-' + service.fields.fontAwesomeIcon"></i>
+                <h4>{{ service.fields.title }}</h4>
+              </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <a class="btn btn-primary btn-xl js-scroll-trigger text-white" id="get-in-touch" href="#contact">Get in Touch!</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+              <h2 class="section-heading text-white"></h2>
               <hr class="light">
-              <h2 class="section-heading text-white fix-mess"></h2>
-
-              <p class="text-faded description">
-                Have you gotten behind with your bookkeeping or had a bad experience with your old bookkeeper and need someone to cleanup the mess?  That's one of my specialties.
+              <p class="text-white" id="contact-blurb"></p>
+            </div>
+          </div>
+          <div class="row" id="contact-methods">
+            <div class="col-12 col-sm-4 ml-auto text-center text-white" v-for="contactMethod in contactMethods">
+              <i class="fa fa-3x sr-contact" :class="'fa-' + contactMethod.fields.fontAwesomeIcon"></i>
+              <p>
+                <a :href="contactMethod.fields.htmlReference" :id="contactMethod.fields.title" target="_blank" class="text-white">
+                  {{ contactMethod.fields.title }}
+                </a>
               </p>
-            </span>
-            <a class="btn btn-default btn-xl js-scroll-trigger text-primary" href="#services">How Can I Help?</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-
-    <section id="services" >
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">At Your Service</h2>
-            <hr class="primary">
-          </div>
-        </div>
-      </div>
-      <div class="container col-lg-8">
-        <div class="row" id="service-list">
-          <!-- services populated here -->
-        </div>
-        <div class="row">
-          <div class="col-12 text-center">
-            <a class="btn btn-primary btn-xl js-scroll-trigger text-white" id="get-in-touch" href="#contact">Get in Touch!</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="bg-primary">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white"></h2>
-            <hr class="light">
-            <p class="text-white" id="contact-blurb"></p>
-          </div>
-        </div>
-        <div class="row" id="contact-methods">
-          <!-- contact methods set here -->
-        </div>
-      </div>
-    </section>
-
-    <div id="promo" style="position: fixed;top: 90px;z-index: 1029;color: white;width: 100%;background: #1a75ff;text-align: center;">
-      Be Wise and get your first year of Xero for only $12 when you start working with me!
     </div>
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/vue/vue.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -201,6 +217,18 @@
     <script src="https://unpkg.com/contentful@4.6.2/dist/contentful.min.js"></script>
 
     <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          heading: '',
+          aboutHeader: '',
+          about: '',
+          industries: [],
+          services: [],
+          contactMethods: [],
+        }
+      });
+
       var client = contentful.createClient({
         accessToken: 'd9d86021651dfc724a80a587849fc837b0481241acff761872317a05156568fe',
         space: 'rb92l2zmtf6j'
@@ -209,14 +237,14 @@
       //set header
       client.getEntry('MTidb7OMiAuII0YeiQGI0')
             .then(function(entry) {
-              $('#homeHeading').html(entry.fields.value);
+              app.heading = entry.fields.value;
             });
 
       //set about text
       client.getEntry('2m6fnzZFVaa4AEewY4AAik')
             .then(function(entry) {
-              $('#about h1').html(entry.fields.title);
-              $('#about .about-text').html(entry.fields.value);
+              app.aboutHeader = entry.fields.title;
+              app.about = entry.fields.value;
             });
 
       //set industry experience
@@ -230,33 +258,8 @@
       client.getEntries({
         content_type: 'industry',
         order: 'fields.order'
-      }).then(function(entries) {
-        var industries = $('#industries');
-
-        /*
-          <div class="col-lg-3 col-sm-4 col-6 text-center">
-            <div class="service-box">
-              <i class="fa fa-2x fa-<-- entries.fields.fontAwesomeIcon --> text-faded sr-icons"></i>
-              <p class="text-faded"><-- entries.fields.title --></p>
-            </div>
-          </div>
-        */
-        entries.items.forEach(function(entry) {
-          var icon = document.createElement('i');
-          icon.className = 'fa fa-2x text-faded sr-icons fa-' + entry.fields.fontAwesomeIcon;
-          var paragraph = document.createElement('p');
-          paragraph.className = 'text-faded';
-          paragraph.innerText = entry.fields.title;
-
-          var innerDiv = document.createElement('div');
-          innerDiv.className = 'service-box';
-          $(innerDiv).append(icon).append(paragraph);
-
-          var outerDiv = document.createElement('div');
-          outerDiv.className = 'col-lg-3 col-sm-4 col-6 text-center';
-          $(outerDiv).append(innerDiv);
-          industries.append(outerDiv);
-        });
+      }).then(function(industries) {
+        app.industries = industries.items;
       });
 
       client.getEntry('4vStRJUeMUW80geMyg6mMu')
@@ -268,31 +271,8 @@
       client.getEntries({
         content_type: 'service',
         order: 'fields.order'
-      }).then(function(entries) {
-        var serviceList = $('#service-list');
-        /*
-          <div class="col-lg-4 col-md-4 col-6 text-center">
-            <div class="service-box text-primary">
-              <i class="fa fa-4x sr-icons fa-font-awesome-icon"></i>
-              <h4>Accounts Payable</h4>
-            </div>
-          </div>
-        */
-        entries.items.forEach(function(entry) {
-          var icon = document.createElement('i');
-          icon.className = 'fa fa-4x sr-icons fa-' + entry.fields.fontAwesomeIcon;
-          var h4 = document.createElement('h4');
-          h4.innerText = entry.fields.title;
-
-          var innerDiv = document.createElement('div');
-          innerDiv.className = 'service-box text-primary';
-          $(innerDiv).append(icon).append(h4);
-
-          var outerDiv = document.createElement('div');
-          outerDiv.className = 'col-lg-4 col-md-4 col-6 text-center';
-          $(outerDiv).append(innerDiv);
-          serviceList.append(outerDiv);
-        });
+      }).then(function(services) {
+        app.services = services.items;
       });
 
       client.getEntry('5Wfo68t7zywyymcKwEyKqI')
@@ -304,48 +284,13 @@
       client.getEntries({
         content_type: 'contactMethod',
         order: 'fields.order'
-      }).then(function(entries) {
-        var contactMethods = $('#contact-methods');
-        /*
-          <div class="col-12 col-sm-4 ml-auto text-center text-white">
-            <i class="fa fa-phone fa-3x sr-contact"></i>
-            <p>
-              <a href="tel:+15184241825" id="telephone">518-424-1825</a>
-            </p>
-          </div>
-        */
-        entries.items.forEach(function(entry) {
-          var icon = document.createElement('i');
-          icon.className = 'fa fa-3x sr-contact fa-' + entry.fields.fontAwesomeIcon;
-          var paragraph = document.createElement('p');
-          var link = document.createElement('a');
-          link.href = entry.fields.htmlReference;
-          link.target = '_blank';
-          link.className = 'text-white';
-          link.innerHTML = entry.fields.title;
-          $(paragraph).append(link)
-
-          var wrapperDiv = document.createElement('div');
-          wrapperDiv.className = 'col-12 col-sm-4 ml-auto text-center text-white';
-          $(wrapperDiv).append(icon).append(paragraph);
-
-          contactMethods.append(wrapperDiv);
-        });
+      }).then(function(contactMethods) {
+        app.contactMethods = contactMethods.items;
       });
 
     </script>
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
-
-
-    <script>
-      var d = new Date();
-      if (d.getMonth() > 8 || d.getFullYear() > 2017 ) {
-        document.getElementById('promo').style.display = 'none';
-      }
-    </script>
-
-
   </body>
 
 </html>

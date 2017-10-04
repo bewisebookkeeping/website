@@ -1,6 +1,5 @@
 /*!
- * Start Bootstrap - Createive v4.0.0-beta (https://startbootstrap.com/template-overviews/creative)
- * Copyright 2013-2017 Start Bootstrap
+ * Be Wise Bookkeeping * Copyright 2017-2017 Be Wise Bookkeeping
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
  */
 body,
@@ -342,6 +341,9 @@ header.masthead {
 
 .btn-xl {
   padding: 15px 30px; }
+
+[v-cloak] {
+  display: none; }
 
 hr {
   margin-top: 4rem;

@@ -8,6 +8,7 @@
 @import "cta.scss";
 @import "bootstrap-overrides.scss";
 
+[v-cloak] { display: none; }
 hr {
   margin-top: 4rem;
   margin-bottom: 2rem;
