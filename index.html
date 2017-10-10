@@ -81,21 +81,21 @@
 
       <!-- About -->
       <section class="bg-primary" id="about">
-        <div class="container">
+        <div class="container" v-cloak>
           <div class="row">
             <div class="col-lg-10 mx-auto text-center">
-              <h1 class="section-heading text-white" v-cloak>{{ aboutHeader}}</h1>
+              <h1 class="section-heading text-white">{{ aboutHeader}}</h1>
 
-              <p class="text-faded about-text" v-cloak>
+              <p class="text-faded about-text">
                 {{ about }}
               </p>
             </div>
 
-            <div class="col-lg-12 mx-auto text-center" v-if="partnerships" v-cloak>
+            <div class="col-lg-12 mx-auto text-center" v-if="partnerships">
               <hr class="light"/>
               <h2 class="section-heading text-white">Partnerships</h2>
 
-              <div class="row partner" v-cloak>
+              <div class="row partner">
                 <div class="col-lg-6 mx-auto text-center" v-for="partnership in partnerships">
                   <a v-bind:href="partnership.fields.url" target="_blank">
                     <img v-bind:src="partnership.fields.logo.fields.file.url" alt="xero logo" class="xero" target="_blank"/>
@@ -108,7 +108,7 @@
               </div>
             </div>
 
-            <div class="col-lg-10 mx-auto text-center" v-cloak>
+            <div class="col-lg-10 mx-auto text-center">
               <span id="industry-experience">
                 <hr class="light">
                 <h2 class="section-heading text-white">{{ experience.heading}} </h2>
@@ -116,7 +116,7 @@
                 <p class="text-faded description">
                   {{ experience.blurb }}
                   <div class="container">
-                    <div class="row" id="industries" v-cloak>
+                    <div class="row" id="industries">
                       <div class="col-lg-3 col-sm-4 col-6 text-center" v-for="industry in experience.industries">
                         <div class="service-box">
                           <i class="fa fa-2x text-faded sr-icons" :class="'fa-' + industry.fields.fontAwesomeIcon"></i>
@@ -144,7 +144,7 @@
 
 
       <!-- Services offered -->
-      <section id="services" >
+      <section id="services" v-cloak>
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
@@ -155,7 +155,7 @@
         </div>
         <div class="container col-lg-8">
           <div class="row" id="service-list">
-            <div class="col-lg-4 col-md-4 col-6 text-center" v-for="service in services" v-cloak>
+            <div class="col-lg-4 col-md-4 col-6 text-center" v-for="service in services">
               <div class="service-box text-primary" >
                 <i class="fa fa-4x sr-icons" :class="'fa-' + service.fields.fontAwesomeIcon"></i>
                 <h4>{{ service.fields.title }}</h4>
@@ -199,7 +199,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/vue/vue.js"></script>
+    <script src="vendor/vue/vue.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
