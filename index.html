@@ -67,6 +67,7 @@
         </div>
       </nav>
 
+      <!-- Heading -->
       <header class="masthead">
         <div class="header-content">
           <div class="header-content-inner">
@@ -78,6 +79,7 @@
         </div>
       </header>
 
+      <!-- About -->
       <section class="bg-primary" id="about">
         <div class="container">
           <div class="row">
@@ -87,47 +89,35 @@
               <p class="text-faded about-text" v-cloak>
                 {{ about }}
               </p>
+            </div>
 
+            <div class="col-lg-12 mx-auto text-center" v-if="partnerships" v-cloak>
               <hr class="light"/>
               <h2 class="section-heading text-white">Partnerships</h2>
-              <div class="col-lg-12 mx-auto text-center">
-                <div class="row partner">
-                  <div class="col-lg-6 mx-auto text-center">
 
-                    <div>
-                      <a href="https://www.xero.com/us/">
-                        <img src="img/xero-logo.png" alt="xero logo" class="xero" target="_blank"/>
-                      </a>
-                    </div>
-                    <h3 class="section-heading text-white">Xero Partner</h2>
-                    <p class="text-faded">
-                      Cloud based small business accounting software with all the time-saving tools you need to grow your business.
-                    </p>
-                  </div>
-                  <div class="col-lg-6 mx-auto text-center">
-                    <div>
-                      <a href="https://quickbooks.intuit.com/" target="_blank">
-                        <img src="img/qb.png" alt="Quickbooks logo"/>
-                      </a>
-                    </div>
-                    <h3 class="section-heading text-white">Quickbooks ProAdvisor</h2>
-                    <p class="text-faded">
-                      The #1 rated small business accounting software.
-                    </p>
-                  </div>
+              <div class="row partner" v-cloak>
+                <div class="col-lg-6 mx-auto text-center" v-for="partnership in partnerships">
+                  <a v-bind:href="partnership.fields.url" target="_blank">
+                    <img v-bind:src="partnership.fields.logo.fields.file.url" alt="xero logo" class="xero" target="_blank"/>
+                  </a>
+                  <h3 class="section-heading text-white">{{ partnership.fields.title }}</h3>
+                  <p class="text-faded">
+                    {{ partnership.fields.description }}
+                  </p>
                 </div>
               </div>
+            </div>
 
-
+            <div class="col-lg-10 mx-auto text-center" v-cloak>
               <span id="industry-experience">
                 <hr class="light">
-                <h2 class="section-heading text-white">Industry Experience</h2>
+                <h2 class="section-heading text-white">{{ experience.heading}} </h2>
 
                 <p class="text-faded description">
-                  Janet has over 30 years of experience serving clients in many industries
+                  {{ experience.blurb }}
                   <div class="container">
                     <div class="row" id="industries" v-cloak>
-                      <div class="col-lg-3 col-sm-4 col-6 text-center" v-for="industry in industries">
+                      <div class="col-lg-3 col-sm-4 col-6 text-center" v-for="industry in experience.industries">
                         <div class="service-box">
                           <i class="fa fa-2x text-faded sr-icons" :class="'fa-' + industry.fields.fontAwesomeIcon"></i>
                           <p class="text-faded">{{ industry.fields.title }}</p>
@@ -140,10 +130,10 @@
 
               <span id="fix-mess">
                 <hr class="light">
-                <h2 class="section-heading text-white fix-mess"></h2>
+                <h2 class="section-heading text-white fix-mess">{{ fixTheMess.heading }}</h2>
 
                 <p class="text-faded description">
-                  Have you gotten behind with your bookkeeping or had a bad experience with your old bookkeeper and need someone to cleanup the mess?  That's one of my specialties.
+                  {{ fixTheMess.blurb  }}
                 </p>
               </span>
               <a class="btn btn-default btn-xl js-scroll-trigger text-primary" href="#services">How Can I Help?</a>
@@ -153,6 +143,7 @@
       </section>
 
 
+      <!-- Services offered -->
       <section id="services" >
         <div class="container">
           <div class="row">
@@ -180,17 +171,18 @@
         </div>
       </section>
 
-      <section id="contact" class="bg-primary">
+      <!-- Contact Information -->
+      <section id="contact" class="bg-primary" v-cloak>
         <div class="container">
           <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-              <h2 class="section-heading text-white"></h2>
+              <h2 class="section-heading text-white">{{ contact.heading }}</h2>
               <hr class="light">
-              <p class="text-white" id="contact-blurb"></p>
+              <p class="text-white" id="contact-blurb">{{ contact.blurb }}</p>
             </div>
           </div>
           <div class="row" id="contact-methods">
-            <div class="col-12 col-sm-4 ml-auto text-center text-white" v-for="contactMethod in contactMethods">
+            <div class="col-12 col-sm-4 ml-auto text-center text-white" v-for="contactMethod in contact.methods">
               <i class="fa fa-3x sr-contact" :class="'fa-' + contactMethod.fields.fontAwesomeIcon"></i>
               <p>
                 <a :href="contactMethod.fields.htmlReference" :id="contactMethod.fields.title" target="_blank" class="text-white">
@@ -216,79 +208,9 @@
 
     <script src="https://unpkg.com/contentful@4.6.2/dist/contentful.min.js"></script>
 
-    <script>
-      var app = new Vue({
-        el: '#app',
-        data: {
-          heading: '',
-          aboutHeader: '',
-          about: '',
-          industries: [],
-          services: [],
-          contactMethods: [],
-        }
-      });
+    <!-- the vue app for this page -->
+    <script src="js/vue-app.min.js"></script>
 
-      var client = contentful.createClient({
-        accessToken: 'd9d86021651dfc724a80a587849fc837b0481241acff761872317a05156568fe',
-        space: 'rb92l2zmtf6j'
-      });
-
-      //set header
-      client.getEntry('MTidb7OMiAuII0YeiQGI0')
-            .then(function(entry) {
-              app.heading = entry.fields.value;
-            });
-
-      //set about text
-      client.getEntry('2m6fnzZFVaa4AEewY4AAik')
-            .then(function(entry) {
-              app.aboutHeader = entry.fields.title;
-              app.about = entry.fields.value;
-            });
-
-      //set industry experience
-      client.getEntry('3nROxNkm12eoWoGKUiY6eW')
-            .then(function(entry) {
-              $('#industry-experience h2').html(entry.fields.title);
-              $('#industry-experience .description').html(entry.fields.value);
-            });
-
-      //populate industries
-      client.getEntries({
-        content_type: 'industry',
-        order: 'fields.order'
-      }).then(function(industries) {
-        app.industries = industries.items;
-      });
-
-      client.getEntry('4vStRJUeMUW80geMyg6mMu')
-            .then(function(entry) {
-              $('#fix-mess h2').html(entry.fields.title);
-              $('#fix-mess .description').html(entry.fields.value);
-            });
-
-      client.getEntries({
-        content_type: 'service',
-        order: 'fields.order'
-      }).then(function(services) {
-        app.services = services.items;
-      });
-
-      client.getEntry('5Wfo68t7zywyymcKwEyKqI')
-            .then(function(entry) {
-              $('#contact h2').html(entry.fields.title);
-              $('#contact-blurb').html(entry.fields.value);
-            });
-
-      client.getEntries({
-        content_type: 'contactMethod',
-        order: 'fields.order'
-      }).then(function(contactMethods) {
-        app.contactMethods = contactMethods.items;
-      });
-
-    </script>
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
   </body>

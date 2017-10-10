@@ -46,7 +46,7 @@ gulp.task('minify-css', ['sass'], function() {
 
 // Minify custom JS
 gulp.task('minify-js', function() {
-  return gulp.src('js/creative.js')
+  return gulp.src(['js/vue-app.js', 'js/creative.js'])
     .pipe(uglify())
     .pipe(header(banner, {
       pkg: pkg
